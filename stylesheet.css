@@ -1,0 +1,11 @@
+body {background:#ffffff; color:#999999; font-family:"arial"; text-indent:30px; font-size:100%;} 
+h1{font-size:150%; font-family:"arial"; color:#999999; text-indent:50px;}
+#menu ul {margin:0; padding:0; list-style-type:none; list-style-image:none; }
+#menu li {display:inline; padding:5px 40px 5px 40px}
+#menu a {text-decoration:none;}
+a:link {color:#999999;}
+a:visited {color:#999999}
+a:hover {color:#999999;}
+a:active {color:#999999;}
+table {width:55%; height:80%; background-color:#686868; border-collapse:collapse;}
+table, td, th {border:5px solid grey; padding:10px; text-align:center; font-size:90%; }
