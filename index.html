@@ -3,13 +3,9 @@
 <title>W3.CSS Template</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://michaelreda.uk/w3_stylesheet.css">
+<link rel="stylesheet" href="w3_stylesheet.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
-<style>
-body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
-.w3-third img{margin-bottom: 0px; margin-top: 0px; cursor: pointer}
-.w3-third img:hover{opacity: 1}
-</style>
+
 <body class="w3-light-grey w3-content" style="max-width:1600px">
 
 <!-- Sidebar/menu -->
@@ -38,44 +34,36 @@ body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
   <div class="w3-hide-large" style="margin-top:83px"></div>
   
   <!-- Photo grid -->
-  <div class="w3-row">
+  <div class="w3-row-padding">
     <div class="w3-third">
       <img src="img_1.jpeg" style="width:100%" onclick="onClick(this)" alt="image 1">
       <img src="img_2.jpeg" style="width:100%" onclick="onClick(this)" alt="image 2">
       <img src="img_3.jpeg" style="width:100%" onclick="onClick(this)" alt="image 3">
+      <img src="img_13.jpeg" style="width:100%" onclick="onClick(this)" alt="image 13">
+      <img src="img_16.jpeg" style="width:100%" onclick="onClick(this)" alt="image 16">
+      <img src="img_10.jpeg" style="width:100%" onclick="onClick(this)" alt="image 10">
     </div>
 
     <div class="w3-third">
       <img src="img_4.jpeg" style="width:100%" onclick="onClick(this)" alt="image 4">
       <img src="img_5.jpeg" style="width:100%" onclick="onClick(this)" alt="image 5">
       <img src="img_6.jpeg" style="width:100%" onclick="onClick(this)" alt="image 6">
+      <img src="img_18.jpeg" style="width:100%" onclick="onClick(this)" alt="image 18">
+      <img src="img_17.jpeg" style="width:100%" onclick="onClick(this)" alt="image 17">
+      <img src="img_12.jpeg" style="width:100%" onclick="onClick(this)" alt="image 12">
     </div>
     
     <div class="w3-third">
       <img src="img_7.jpeg" style="width:100%" onclick="onClick(this)" alt="image 7">
       <img src="img_8.jpeg" style="width:100%" onclick="onClick(this)" alt="image 8">
+      <img src="img_15.jpeg" style="width:100%" onclick="onClick(this)" alt="image 15">
+      <img src="img_19.jpeg" style="width:100%" onclick="onClick(this)" alt="image 19">
+      <img src="img_14.jpeg" style="width:100%" onclick="onClick(this)" alt="image 14">
       <img src="img_9.jpeg" style="width:100%" onclick="onClick(this)" alt="image 9">
     </div>
-    
-    <div class="w3-third">
-      <img src="img_10.jpeg" style="width:100%" onclick="onClick(this)" alt="image 10">
-      <img src="img_18.jpeg" style="width:100%" onclick="onClick(this)" alt="image 18">
-      <img src="img_12.jpeg" style="width:100%" onclick="onClick(this)" alt="image 12">
-    </div>
-
-    <div class="w3-third">
-      <img src="img_13.jpeg" style="width:100%" onclick="onClick(this)" alt="image 13">
-      <img src="img_14.jpeg" style="width:100%" onclick="onClick(this)" alt="image 14">
-      <img src="img_15.jpeg" style="width:100%" onclick="onClick(this)" alt="image 15">
-    </div>
-    
-    <div class="w3-third">
-      <img src="img_16.jpeg" style="width:100%" onclick="onClick(this)" alt="image 16">
-      <img src="img_17.jpeg" style="width:100%" onclick="onClick(this)" alt="image 17">
-      <img src="img_19.jpeg" style="width:100%" onclick="onClick(this)" alt="image 19">
-    </div>
-    
   </div>
+  
+  
   
   <!-- Modal for full size images on click-->
   <div id="modal01" class="w3-modal w3-black" style="padding-top:0" onclick="this.style.display='none'">
@@ -91,15 +79,29 @@ body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
   <!-- Tuppence in York section -->
   <div class="w3-container w3-light-grey w3-padding-32 w3-padding-large" id="tuppence">
     <div class="w3-content" style="max-width:600px">
-      <h4 class="w3-center"><b>Tuppence in York</b></h4>
+      <h5 class="w3-center"><b>Tuppence in York</b></h5>
       <p>A children's story book written by my wife and illusrated by me. Copies are for sale in Upside Down Designs and Topping and Co. You can also borrow a copy from York Library.</p>
     </div>
+    
+    <div class="w3-third">
+      <p>test 1</p>
+    </div>
+    
+    <div class="w3-third">
+      <p>test 2</p>
+    </div>
+    
+    <div class="w3-third">
+      <p>test 3</p>
+    </div>
+    
   </div>
+  
 
   <!-- About section -->
   <div class="w3-container w3-dark-grey w3-center w3-text-light-grey w3-padding-32" id="about">
-    <h4><b>About Me</b></h4>
-    <img src="/w3images/avatar_hat.jpg" alt="Me" class="w3-image w3-padding-32" width="600" height="650">
+    <h5><b>About Me</b></h5>
+    <img src="/w3images/avatar_hat.jpg" alt="Me" class="michaels_image w3-padding-32" width="600" height="650">
     <div class="w3-content w3-justify" style="max-width:600px">
       <p>I am an oil painter based in York.</p>
     </div>
