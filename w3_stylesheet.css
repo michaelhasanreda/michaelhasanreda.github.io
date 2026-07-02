@@ -41,7 +41,7 @@ legend{color:inherit;display:table;max-width:100%;padding:0;white-space:normal}t
 }
 
 html,body,h1,h2,h3,h4,h5,h6,a {font-family:"Raleway", sans-serif; font-weight:200; margin:10px 0; font-size:15px;line-height:1.5}
-body{overflow-x:hidden}
+body{overflow-x:hidden; width: vw}
 .w3-wide{letter-spacing:4px}
 h1{font-size:36px}
 h2{font-size:30px}
