@@ -218,3 +218,25 @@ button { font: inherit; }
   .gallery__flex { flex-direction: column; }
   .gallery__flex--book .gallery__column { max-width: 100%; }
 }
+
+@media (max-width: 900px) and (orientation: landscape) {
+  .gallery__flex {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  .gallery__column {
+    flex: 1 1 calc(33.333% - 8px);
+    max-width: calc(33.333% - 8px);
+  }
+
+  .gallery__flex--book {
+    justify-content: center;
+  }
+
+  .gallery__flex--book .gallery__column {
+    flex: 1 1 calc(33.333% - 8px);
+    max-width: calc(33.333% - 8px);
+  }
+}
