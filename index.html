@@ -1,164 +1,164 @@
 <!DOCTYPE html>
 <html lang="en">
-<title>Michael Reda</title>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="mr_stylesheet.css">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Michael Reda</title>
+  <link rel="stylesheet" href="mr_stylesheet.css">
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to content</a>
 
-<body class="w3-white w3-content">
-
-<!-- Sidebar/menu -->
-<nav class="w3-sidebar w3-bar-block w3-white w3-animate-left w3-text-grey w3-collapse w3-top w3-center" style="z-index:3;width:200px" id="mySidebar"><br>
-  <h3 class="w3-padding-64 w3-center">MICHAEL<br>REDA</h3>
-  <a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-padding w3-hide-large">[close]</a>
-  <a href="#" onclick="w3_close()" class="w3-bar-item w3-button">PORTFOLIO</a> 
-  <a href="#book" onclick="w3_close()" class="w3-bar-item w3-button">BOOK</a>
-  <a href="#about" onclick="w3_close()" class="w3-bar-item w3-button">ABOUT ME</a>
-  <a href="#exhibitions" onclick="w3_close()" class="w3-bar-item w3-button">EXHIBITIONS</a>
-  <a href="#contact" onclick="w3_close()" class="w3-bar-item w3-button">CONTACT</a>
-</nav>
-
-<!-- Top menu on small screens -->
-<header class="w3-container w3-top w3-hide-large w3-white w3-large">
-  <span class="w3-left w3-padding">MICHAEL REDA</span>
-  <a href="javascript:void(0)" class="w3-right w3-button w3-white" onclick="w3_open()">☰</a>
-</header>
-
-<!-- Overlay effect when opening sidebar on small screens -->
-<div class="w3-overlay w3-hide-large w3-animate-opacity" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
-
-<!-- !PAGE CONTENT! -->
-<div class="w3-main" style="margin-left:200px">
-
-  <!-- Push down content on small screens --> 
-  <div class="w3-hide-large" style="margin-top:38px"></div>
-  
-  <!-- Photo grid -->
-  <div class="w3-row-padding">
-    <div class="w3-third">
-      <img src="img_1.jpeg" style="width:100%" onclick="onClick(this)" alt="image 1">
-      <img src="img_2.jpeg" style="width:100%" onclick="onClick(this)" alt="image 2">
-      <img src="img_3.jpeg" style="width:100%" onclick="onClick(this)" alt="image 3">
-      <img src="img_13.jpeg" style="width:100%" onclick="onClick(this)" alt="image 13">
-      <img src="img_16.jpeg" style="width:100%" onclick="onClick(this)" alt="image 16">
+  <aside class="sidebar" id="sidebar" aria-label="Primary navigation">
+    <div class="sidebar__inner">
+      <h1 class="sidebar__title">MICHAEL<br>REDA</h1>
+      <button class="sidebar__close button button--ghost" type="button" onclick="closeSidebar()">[close]</button>
+      <nav class="sidebar__nav">
+        <a class="sidebar__link" href="#top" onclick="closeSidebar()">Portfolio</a>
+        <a class="sidebar__link" href="#book" onclick="closeSidebar()">Book</a>
+        <a class="sidebar__link" href="#about" onclick="closeSidebar()">About Me</a>
+        <a class="sidebar__link" href="#exhibitions" onclick="closeSidebar()">Exhibitions</a>
+        <a class="sidebar__link" href="#contact" onclick="closeSidebar()">Contact</a>
+      </nav>
     </div>
+  </aside>
 
-    <div class="w3-third">
-      <img src="img_4.jpeg" style="width:100%" onclick="onClick(this)" alt="image 4">
-      <img src="img_5.jpeg" style="width:100%" onclick="onClick(this)" alt="image 5">
-      <img src="img_6.jpeg" style="width:100%" onclick="onClick(this)" alt="image 6">
-      <img src="img_18.jpeg" style="width:100%" onclick="onClick(this)" alt="image 18">
-      <img src="img_17.jpeg" style="width:100%" onclick="onClick(this)" alt="image 17">
-      <img src="img_12.jpeg" style="width:100%" onclick="onClick(this)" alt="image 12">
-    </div>
-    
-    <div class="w3-third">
-      <img src="img_7.jpeg" style="width:100%" onclick="onClick(this)" alt="image 7">
-      <img src="img_8.jpeg" style="width:100%" onclick="onClick(this)" alt="image 8">
-      <img src="img_15.jpeg" style="width:100%" onclick="onClick(this)" alt="image 15">
-      <img src="img_19.jpeg" style="width:100%" onclick="onClick(this)" alt="image 19">
-      <img src="img_14.jpeg" style="width:100%" onclick="onClick(this)" alt="image 14">
-      <img src="img_9.jpeg" style="width:100%" onclick="onClick(this)" alt="image 9">
-    </div>
-  </div>
-  
-  
-  
-  <!-- Modal for full size images on click-->
-  <div id="modal01" class="w3-modal w3-white" style="padding-top:0" onclick="this.style.display='none'">
-    <span class="w3-button w3-black w3-xlarge w3-display-topright">×</span>
-    <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
-      <img id="img01" class="w3-image">
-      <p id="caption"></p>
-    </div>
-  </div>
+  <header class="topbar">
+    <div class="topbar__brand">MICHAEL REDA</div>
+    <button class="topbar__menu button button--ghost" type="button" aria-controls="sidebar" aria-expanded="false" onclick="openSidebar()">☰</button>
+  </header>
 
-<hr>
+  <div class="overlay" id="overlay" onclick="closeSidebar()" aria-hidden="true"></div>
 
-  <!-- Tuppence in York section -->
-  <div class="w3-container w3-light-grey w3-padding-32 w3-padding-large" id="book">
-    <div class="w3-content" style="max-width:600px">
-      <h5 class="w3-center"><b>Tuppence in York</b></h5>
-      <p>A children's picture book written by my wife, Debs, which I illustrated. We published it in 2024. All illustrations are pen and ink drawings with watercolour washes. Those who know York will recognise many scenes. Copies are for sale in Upside Down Designs and Topping and Company. You can also buy or borrow a copy from York Library.</p>
-    </div>
-    <div class = w3-row-padding>
-      <div class="w3-third">
-        <img src="TiY_1.jpeg" style="width:100%; cursor:default" alt="Tuppence in York">
+  <main class="site-main" id="main-content">
+    <div class="mobile-spacer"></div>
+
+    <section class="gallery section" id="top" aria-label="Artwork gallery">
+      <div class="gallery__flex">
+        <div class="gallery__column">
+          <button class="gallery__item" type="button" onclick="openModal(this)"><img src="img_1.jpeg" alt="Artwork image 1"></button>
+          <button class="gallery__item" type="button" onclick="openModal(this)"><img src="img_2.jpeg" alt="Artwork image 2"></button>
+          <button class="gallery__item" type="button" onclick="openModal(this)"><img src="img_3.jpeg" alt="Artwork image 3"></button>
+          <button class="gallery__item" type="button" onclick="openModal(this)"><img src="img_13.jpeg" alt="Artwork image 13"></button>
+          <button class="gallery__item" type="button" onclick="openModal(this)"><img src="img_16.jpeg" alt="Artwork image 16"></button>
+        </div>
+        <div class="gallery__column">
+          <button class="gallery__item" type="button" onclick="openModal(this)"><img src="img_4.jpeg" alt="Artwork image 4"></button>
+          <button class="gallery__item" type="button" onclick="openModal(this)"><img src="img_5.jpeg" alt="Artwork image 5"></button>
+          <button class="gallery__item" type="button" onclick="openModal(this)"><img src="img_6.jpeg" alt="Artwork image 6"></button>
+          <button class="gallery__item" type="button" onclick="openModal(this)"><img src="img_18.jpeg" alt="Artwork image 18"></button>
+          <button class="gallery__item" type="button" onclick="openModal(this)"><img src="img_17.jpeg" alt="Artwork image 17"></button>
+          <button class="gallery__item" type="button" onclick="openModal(this)"><img src="img_12.jpeg" alt="Artwork image 12"></button>
+        </div>
+        <div class="gallery__column">
+          <button class="gallery__item" type="button" onclick="openModal(this)"><img src="img_7.jpeg" alt="Artwork image 7"></button>
+          <button class="gallery__item" type="button" onclick="openModal(this)"><img src="img_8.jpeg" alt="Artwork image 8"></button>
+          <button class="gallery__item" type="button" onclick="openModal(this)"><img src="img_15.jpeg" alt="Artwork image 15"></button>
+          <button class="gallery__item" type="button" onclick="openModal(this)"><img src="img_19.jpeg" alt="Artwork image 19"></button>
+          <button class="gallery__item" type="button" onclick="openModal(this)"><img src="img_14.jpeg" alt="Artwork image 14"></button>
+          <button class="gallery__item" type="button" onclick="openModal(this)"><img src="img_9.jpeg" alt="Artwork image 9"></button>
+        </div>
       </div>
-      
-      <div class="w3-third">
-        <img src="TiY_4.jpeg" style="width:100%; cursor:default" alt="Tuppence in York">
+    </section>
+
+    <section class="modal" id="modal" aria-hidden="true" aria-labelledby="modal-caption" role="dialog">
+      <div class="modal__backdrop" onclick="closeModal()"></div>
+      <div class="modal__content" role="document">
+        <button class="modal__close button button--dark" type="button" aria-label="Close image" onclick="closeModal()">×</button>
+        <img class="modal__image" id="modal-image" alt="">
+        <p class="modal__caption" id="modal-caption"></p>
       </div>
-      
-      <div class="w3-third">
-        <img src="TiY_2.jpeg" style="width:100%; cursor:default" alt="Tuppence in York">
+    </section>
+
+    <hr class="section-divider">
+
+    <section class="section section--muted book" id="book">
+      <div class="section__inner section__inner--narrow">
+        <h2 class="section__title section__title--center"><strong>Tuppence in York</strong></h2>
+        <p>
+          A children's picture book written by my wife, Debs, which I illustrated. We published it in 2024.
+          All illustrations are pen and ink drawings with watercolour washes. Those who know York will recognise
+          many scenes. Copies are for sale in Upside Down Designs and Topping and Company. You can also buy or
+          borrow a copy from York Library.
+        </p>
       </div>
-    </div>
-    
-  </div>
-  
 
-  <!-- About section -->
-  <div class="w3-container w3-light-grey w3-center w3-text-dark-grey w3-padding-32" id="about">
-    <h5><b>About Me</b></h5>
-    <img src="/w3images/avatar_hat.jpg" alt="Me" class="w3_image w3-padding-32">
-    <div class="w3-content w3-justify" style="max-width:600px">
-      <p>I am an artist based in York. I work mostly in oil paint. I occasionally work in charcoal, pen and ink, and watercolour.</p>
-    </div>
-
-    <div class="w3-content w3-center" style="max-width:600px" id="exhibitions">
-          <h5><b>Exhibitions</b></h5>
-      <ul>
-        <li>The Golden Ball, Bishophill - Autumn 2026, TBC</li>
-      </ul>
-      <br>
-
-      <h5><b>Past Exhibitions</b></h5>
-      <ul>
-        <li>Blossom Street Gallery, York - 2025</li>
-        <li>The Saltbox Gallery, Helmsley - 2024</li>
-        <li>Spark York - 2024</li>
-        <li>The New Holgate, York - 2024</li>
-        <li>York Open Studios - 2024</li>
-      </ul>
-    </div>
-  </div>
-
-  <!-- Footer -->
-  <footer class="w3-container w3-padding-16 w3-dark-grey">  
-    <div class="w3-row-padding">
-      <div id="contact">
-        <p>Contact: michael.hasan.reda@proton.me</p>      
+      <div class="gallery__flex gallery__flex--book">
+        <div class="gallery__column">
+          <img class="book__image" src="TiY_1.jpeg" alt="Tuppence in York illustration 1">
+        </div>
+        <div class="gallery__column">
+          <img class="book__image" src="TiY_4.jpeg" alt="Tuppence in York illustration 2">
+        </div>
+        <div class="gallery__column">
+          <img class="book__image" src="TiY_2.jpeg" alt="Tuppence in York illustration 3">
+        </div>
       </div>
-    
+    </section>
+
+    <section class="section section--muted section--center about" id="about">
+      <div class="section__inner section__inner--narrow">
+        <h2 class="section__title"><strong>About Me</strong></h2>
+        <p>
+          I am an artist based in York. I work mostly in oil paint. I occasionally work in charcoal,
+          pen and ink, and watercolour.
+        </p>
+      </div>
+
+      <div class="section__inner section__inner--narrow" id="exhibitions">
+        <h2 class="section__title"><strong>Exhibitions</strong></h2>
+        <ul class="list">
+          <li>The Golden Ball, Bishophill - Autumn 2026, TBC</li>
+        </ul>
+
+        <h2 class="section__title section__title--spaced"><strong>Past Exhibitions</strong></h2>
+        <ul class="list">
+          <li>Blossom Street Gallery, York - 2025</li>
+          <li>The Saltbox Gallery, Helmsley - 2024</li>
+          <li>Spark York - 2024</li>
+          <li>The New Holgate, York - 2024</li>
+          <li>York Open Studios - 2024</li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer" id="contact">
+    <div class="footer__inner">
+      <p>Contact: michael.hasan.reda@proton.me</p>
     </div>
   </footer>
-  
-<!-- End page content -->
-</div>
 
-<script>
-// Script to open and close sidebar
-function w3_open() {
-  document.getElementById("mySidebar").style.display = "block";
-  document.getElementById("myOverlay").style.display = "block";
-}
- 
-function w3_close() {
-  document.getElementById("mySidebar").style.display = "none";
-  document.getElementById("myOverlay").style.display = "none";
-}
+  <script>
+    function openSidebar() {
+      document.getElementById('sidebar').classList.add('is-open');
+      document.getElementById('overlay').classList.add('is-visible');
+      document.querySelector('.topbar__menu').setAttribute('aria-expanded', 'true');
+    }
 
-// Modal Image Gallery
-function onClick(element) {
-  document.getElementById("img01").src = element.src;
-  document.getElementById("modal01").style.display = "block";
-  var captionText = document.getElementById("caption");
-  captionText.innerHTML = element.alt;
-}
+    function closeSidebar() {
+      document.getElementById('sidebar').classList.remove('is-open');
+      document.getElementById('overlay').classList.remove('is-visible');
+      document.querySelector('.topbar__menu').setAttribute('aria-expanded', 'false');
+    }
 
-</script>
+    function openModal(element) {
+      const modal = document.getElementById('modal');
+      const image = document.getElementById('modal-image');
+      const caption = document.getElementById('modal-caption');
+      const source = element.querySelector('img');
+      image.src = source.src;
+      image.alt = source.alt;
+      caption.textContent = source.alt;
+      modal.classList.add('is-open');
+      modal.setAttribute('aria-hidden', 'false');
+    }
 
-
+    function closeModal() {
+      const modal = document.getElementById('modal');
+      modal.classList.remove('is-open');
+      modal.setAttribute('aria-hidden', 'true');
+    }
+  </script>
 </body>
 </html>
