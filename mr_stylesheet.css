@@ -144,7 +144,7 @@ button { font: inherit; }
 }
 .gallery__item { padding: 0; border: 0; background: transparent; cursor: pointer; }
 .gallery__item img { width: 100%; display: block; box-shadow: var(--shadow-sm); }
-.book__image { width: 100%; aspect-ratio: 4 / 5; object-fit: contain; background: #fff; }
+.book__image { width: 100%; object-fit: contain; background: #fff; }
 
 .list { margin: 0; padding-left: 20px; text-align: left; }
 .list li { margin-bottom: 8px; }
@@ -194,8 +194,8 @@ button { font: inherit; }
   flex: 0 0 auto;
 }
 
-.footer { background: var(--surface-dark); color: #fff; }
-.footer__inner { max-width: var(--content-max); margin: 0 auto; padding: 18px 24px; }
+.footer { background: var(--surface-dark); color: #fff; text-align: center; }
+.footer__inner { max-width: var(--content-max) ; margin: 0 auto; padding: 18px 24px; }
 
 @media (max-width: 992px) {
   .sidebar { transform: translateX(-100%); }
